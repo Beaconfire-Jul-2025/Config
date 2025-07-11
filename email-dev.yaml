@@ -1,0 +1,6 @@
+spring:
+  mail:
+    username: ${MAIL_USERNAME:default_dev_user@example.com}
+    password: ${MAIL_PASSWORD:default_dev_password}
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}

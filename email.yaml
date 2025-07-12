@@ -8,6 +8,10 @@ spring:
       exchange: emailExchange
       routing-key: sendEmail
   mail:
+    username: ${MAIL_USERNAME:default_dev_user@example.com}
+    password: ${MAIL_PASSWORD:default_dev_password}
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
     properties:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true

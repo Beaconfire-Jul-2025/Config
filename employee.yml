@@ -3,30 +3,18 @@ server:
 
 spring:
   application:
-    name: employee-service
+    name: employee
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/EmployeeServiceDB
-
-logging:
-  level:
-    org:
-      springframework: DEBUG
-
-cloud:
-  aws:
-    stack:
-      auto: false
+      uri: mongodb://localhost:27017/EmployeeService
 
 app:
   jwt:
     secret: NiXTYNwyutkwyp34w3TYjb297yYUZCaCmr3YhDdT0W4=
   expiration-in-ms: 86400000
-  originsUrl: http://localhost:4200
-
-
-
+  originsUrl: http://localhost:5173
+  
 eureka:
   client:
     service-url:

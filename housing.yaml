@@ -6,7 +6,7 @@ spring:
     name: housing
   datasource:
     url: jdbc:mysql://localhost:3306/HousingService?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username:root:
+    username: root
     password: mysecretpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:

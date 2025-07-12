@@ -25,6 +25,8 @@ app:
   expiration-in-ms: 86400000
   originsUrl: http://localhost:4200
 
+
+
 eureka:
   client:
     service-url:

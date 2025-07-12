@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: employee-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/EmployeeServiceDB
+
+cloud:
+  aws:
+    stack:
+      auto: false
+
+app:
+  jwt:
+    secret: NiXTYNwyutkwyp34w3TYjb297yYUZCaCmr3YhDdT0W4=
+  expiration-in-ms: 86400000
+  originsUrl: ${FRONTEND_URL}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

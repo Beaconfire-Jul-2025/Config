@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: composite
+
+aws:
+  s3:
+    region: us-west-2
+    access-key-id: ${AWS_ACCESS_KEY_ID:test}
+    secret-access-key: ${AWS_SECRET_ACCESS_KEY:test}
+    presigned-url:
+      expiration-minutes: 60
+      max-file-size-mb: 100
+
+server:
+  port: 8085
+  servlet:
+    context-path: /api
+
+app:
+  originsUrl: http://localhost:5172
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

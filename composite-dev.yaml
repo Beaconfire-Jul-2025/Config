@@ -1,0 +1,12 @@
+logging:
+  level:
+    com:
+      example: DEBUG
+    software:
+      amazon:
+        awssdk: INFO
+
+aws:
+  s3:
+    endpoint: http://localhost:4566
+    path-style-access: true

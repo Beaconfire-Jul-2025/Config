@@ -14,8 +14,6 @@ aws:
 
 server:
   port: 8085
-  servlet:
-    context-path: /api
 
 app:
   originsUrl: http://localhost:5172
@@ -24,3 +22,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always

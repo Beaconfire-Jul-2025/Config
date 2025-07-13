@@ -10,6 +10,7 @@ aws:
     presigned-url:
       expiration-minutes: 60
       max-file-size-mb: 100
+    bucket-name: ${AWS_BUCKET_NAME:beaconfire-jul-2025}
 
 server:
   port: 8085

@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: email-service
+          uri: lb://email
+          predicates:
+            - Path=/api/email/**
+          filters:
+            - StripPrefix=2
+            - name: JwtHeaderRelay
+
+        - id: employee-service
+          uri: lb://employee
+          predicates:
+            - Path=/api/employee/**
+          filters:
+            - StripPrefix=2
+            - name: JwtHeaderRelay
+
+        - id: application-service
+          uri: lb://application
+          predicates:
+            - Path=/api/application/**
+          filters:
+            - StripPrefix=2
+            - name: JwtHeaderRelay
+
+        - id: housing-service
+          uri: lb://housing
+          predicates:
+            - Path=/api/housing/**
+          filters:
+            - StripPrefix=2
+            - name: JwtHeaderRelay
+
+        - id: composite-service
+          uri: lb://composite
+          predicates:
+            - Path=/api/composite/**
+          filters:
+            - StripPrefix=2
+            - name: JwtHeaderRelay
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret: NiXTYNwyutkwyp34w3TYjb297yYUZCaCmr3YhDdT0W4=
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

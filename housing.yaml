@@ -22,12 +22,12 @@ app:
   jwt:
     secret: NiXTYNwyutkwyp34w3TYjb297yYUZCaCmr3YhDdT0W4=
     expiration-in-ms: 86400000
-  originsUrl: http://localhost:5172
+  originsUrl: ${FRONTEND_URL:http://localhost:5172}
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
 
 management:
   endpoints:

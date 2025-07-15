@@ -1,20 +1,6 @@
-server:
-  port: 8082
-
-spring:
-  application:
-    name: employee
-
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/EmployeeService
-
 app:
-  jwt:
-    secret: NiXTYNwyutkwyp34w3TYjb297yYUZCaCmr3YhDdT0W4=
-  expiration-in-ms: 86400000
   originsUrl: ${FRONTEND_URL:http://localhost:5172}
-  
+
 eureka:
   client:
     service-url:

@@ -1,8 +1,0 @@
-logging:
-  level:
-    org:
-      springframework:
-        boot: DEBUG
-        cloud:
-          gateway: DEBUG
-        security: DEBUG

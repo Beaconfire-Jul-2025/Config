@@ -1,0 +1,16 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: composite-service
+
+aws:
+  s3:
+    region: us-west-2
+    access-key-id: ${AWS_ACCESS_KEY_ID:test}
+    secret-access-key: ${AWS_SECRET_ACCESS_KEY:test}
+    presigned-url:
+      expiration-minutes: 60
+      max-file-size-mb: 100
+    bucket-name: ${AWS_BUCKET_NAME:beaconfire-jul-2025}

@@ -12,7 +12,7 @@ spring:
           enabled: true
       routes:
         - id: email-service
-          uri: lb://email
+          uri: lb://email-service
           predicates:
             - Path=/api/email/**
           filters:
@@ -20,7 +20,7 @@ spring:
             - name: JwtHeaderRelay
 
         - id: employee-service
-          uri: lb://employee
+          uri: lb://employee-service
           predicates:
             - Path=/api/employee/**
           filters:
@@ -28,7 +28,7 @@ spring:
             - name: JwtHeaderRelay
 
         - id: application-service
-          uri: lb://application
+          uri: lb://application-service
           predicates:
             - Path=/api/application/**
           filters:
@@ -36,7 +36,7 @@ spring:
             - name: JwtHeaderRelay
 
         - id: housing-service
-          uri: lb://housing
+          uri: lb://housing-service
           predicates:
             - Path=/api/housing/**
           filters:
@@ -44,7 +44,7 @@ spring:
             - name: JwtHeaderRelay
 
         - id: composite-service
-          uri: lb://composite
+          uri: lb://composite-service
           predicates:
             - Path=/api/composite/**
           filters:

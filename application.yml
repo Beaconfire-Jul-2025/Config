@@ -17,7 +17,7 @@ management:
 
 springdoc:
   api-docs:
-    path: /openapi
+    path: /openapi/api-docs
   swagger-ui:
     path: /swagger-ui
-    url: /openapi
+    url: /openapi/api-docs

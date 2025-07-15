@@ -5,7 +5,7 @@ spring:
   application:
     name: employee
   rabbitmq:
-    host: ${RABBITMQ_HOST:1231313localhost}
+    host: ${RABBITMQ_HOST:123131localhost}
     port: ${RABBITMQ_PORT:5672}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}

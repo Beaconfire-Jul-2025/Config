@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: employee-service
+    name: email-service
   rabbitmq:
     host: localhost
     port: 5672

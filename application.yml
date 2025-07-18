@@ -1,5 +1,5 @@
 app:
-  originsUrl: ${FRONTEND_URL:http://localhost:5172}
+  originsUrl: ${FRONTEND_URL:http://localhost:8000}
 
 eureka:
   client:

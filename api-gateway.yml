@@ -55,3 +55,23 @@ spring:
       resourceserver:
         jwt:
           secret: NiXTYNwyutkwyp34w3TYjb297yYUZCaCmr3YhDdT0W4=
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    config-url: /openapi/api-docs/swagger-config
+    urls:
+      - name: gateway-service
+        url: /openapi/api-docs
+      - name: application-service
+        url: /api/application/openapi/api-docs
+      - name: employee-service
+        url: /api/employee/openapi/api-docs
+      - name: email-service
+        url: /api/email/openapi/api-docs
+      - name: housing-service
+        url: /api/housing/openapi/api-docs
+      - name: composite-service
+        url: /api/composite/openapi/api-docs
